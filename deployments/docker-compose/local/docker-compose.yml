@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  mongo:
+    container_name: mongo
+    image: ${MONGO_IMAGE}
+    platform: linux/amd64
+    restart: always
+    ports:
+      - 27017:27017
+    networks:
+      - slackbot-demo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:
+
+networks:
+  slackbot-demo:
