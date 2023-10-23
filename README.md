@@ -86,6 +86,7 @@ export _MONGO_ENDPOINT="localhost"
 ```
 ### start app
 ``` shell
+source .env
 go run main.go
 ```
 
