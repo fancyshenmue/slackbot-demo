@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"os"
 	"strings"
 
@@ -41,8 +40,8 @@ func main() {
 
 	client := socketmode.New(
 		api,
-		socketmode.OptionDebug(true),
-		socketmode.OptionLog(log.New(os.Stdout, "socketmode: ", log.Lshortfile|log.LstdFlags)),
+		// socketmode.OptionDebug(true),
+		// socketmode.OptionLog(log.New(os.Stdout, "socketmode: ", log.Lshortfile|log.LstdFlags)),
 	)
 
 	// connect
